@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
+    <title>Fale Conosco</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color:#e0c2f7;">
+
+    
+    <header style="background-color: #ebdff7; padding: 10px; display: flex; align-items: center;">
+        <img src="Logo1.jpg" alt="Moldura Amarela" width="45" height="35" style="margin-right: 10px;">
+        <nav>
+            <a href="index.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Home</button></a>
+            <a href="Rachel2.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Rachel</button></a>
+            <a href="Ross3.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Ross</button></a>
+            <a href="Monica4.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Monica</button></a>
+            <a href="Phoebe5.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Phoebe</button></a>
+            <a href="Joey6.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Joey</button></a>
+            <a href="Chandler7.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; margin-right: 5px; cursor: pointer; border-radius: 5px;">Chandler</button></a>
+            <a href="Fotos8.html" style="text-decoration: none;"><button style="background-color: #a37ebf; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">Galeria</button></a>
+        </nav>
+    </header>
+
+    
+    <main style="padding: 20px; text-align: center;">
+        <section>
+            <h1 style="font-size: 2em; color: #4F5B63;">Fale Conosco</h1>
+            <h2 style="color: #6E7B83; margin-top: 10px;">Qual é o seu personagem favorito?</h2>
+        </section>
+
+        
+        <form onsubmit="return enviarFormulario()" style="margin-top: 20px;">
+            <label for="nome" style="font-weight: bold; color: #4F5B63;">Digite seu nome:</label><br>
+            <input type="text" id="nome" name="nome" required style="width: 300px; padding: 10px; margin-top: 10px; border: 1px solid #7E919B; border-radius: 5px;"><br><br>
+
+            <label for="email" style="font-weight: bold; color: #4F5B63;">Digite seu e-mail:</label><br>
+            <input type="email" id="email" name="email" required style="width: 300px; padding: 10px; margin-top: 10px; border: 1px solid #7E919B; border-radius: 5px;"><br><br>
+
+            <p style="color: #4F5B63;">Qual seu personagem favorito?</p>
+            <input type="radio" id="rachel" name="personagem" value="Rachel" required>
+            <label for="rachel" style="color: #4F5B63;">Rachel</label><br>
+            <input type="radio" id="ross" name="personagem" value="Ross">
+            <label for="ross" style="color: #4F5B63;">Ross</label><br>
+            <input type="radio" id="monica" name="personagem" value="Monica">
+            <label for="monica" style="color: #4F5B63;">Monica</label><br>
+            <input type="radio" id="phoebe" name="personagem" value="Phoebe">
+            <label for="phoebe" style="color: #4F5B63;">Phoebe</label><br>
+            <input type="radio" id="joey" name="personagem" value="Joey">
+            <label for="joey" style="color: #4F5B63;">Joey</label><br>
+            <input type="radio" id="chandler" name="personagem" value="Chandler">
+            <label for="chandler" style="color: #4F5B63;">Chandler</label><br><br>
+
+            <input type="submit" value="Enviar Formulário" style="background-color: #a37ebf; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+        </form>
+
+        
+    </main>
+
+    
+    <script>
+        function enviarFormulario() {
+            const nome = document.getElementById("nome").value;
+            const personagem = document.querySelector('input[name="personagem"]:checked').value;
+    
+            let descricao;
+            switch (personagem) {
+                case "Rachel":
+                    descricao = "a estilosa e determinada em busca de independência.";
+                    break;
+                case "Ross":
+                    descricao = "o paleontólogo apaixonado por dinossauros (e por Rachel).";
+                    break;
+                case "Monica":
+                    descricao = "a chef perfeccionista e competitiva.";
+                    break;
+                case "Phoebe":
+                    descricao = "a excêntrica e engraçada com seu violão único.";
+                    break;
+                case "Joey":
+                    descricao = "o ator carismático que adora comida.";
+                    break;
+                case "Chandler":
+                    descricao = "o sarcástico com o melhor senso de humor.";
+                    break;
+                default:
+                    descricao = "um personagem incrível de Friends!";
+            }
+    
+            alert(`Obrigado, ${nome}! Recebemos sua resposta.\nPersonagem favorito: ${personagem}, ${descricao}`);
+            return false; 
+        }
+    </script>
+
+    
+<div 
+id="friendsCard" 
+style="
+    max-width: 400px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    backround-color: #a37ebf; 
+    cursor: pointer; 
+    transition: transform 0.3s, box-shadow 0.3s;">
+<img src="Friends.jpg" alt="" style="width: 100%; border-radius: 10px; color: #4F5B63">
+<h2 style="font-size: 24px; margin: 15px 0; color: #4F5B63;">Clique Aqui</h2>
+<p id="cardMessage" style="font-size: 16px; color: #6E7B83;">Uma pequena homenagem à série mais assistida do mundo.</p>
+</div>
+
+<script>
+
+const card = document.getElementById("friendsCard");
+
+
+card.addEventListener("mouseover", () => {
+    card.style.transform = "scale(1.05)";
+    card.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.3)";
+});
+
+card.addEventListener("mouseout", () => {
+    card.style.transform = "scale(1)";
+    card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+});
+
+
+card.addEventListener("click", () => {
+    const message = document.getElementById("cardMessage");
+    message.textContent = " A amizade é o que torna Friends tão especial. Entre risos, desentendimentos e abraços, Friends nos mostrou que, no final, a verdadeira amizade é o que torna a vida mais leve e cheia de significado.";
+    message.style.color = "#4F5B63";
+    card.style.backgroundColor = "#d6b7eb";
+});
+
+
+</script>
+
+
+
+    
+</body>
+</html>
